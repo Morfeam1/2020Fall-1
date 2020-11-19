@@ -10,9 +10,12 @@
     "start": "node server/index.js"
   },
   "dependencies": {
+    "apollo-server": "^2.19.0",
     "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "knex": "^0.21.12",
     "mysql": "^2.18.1"
   },
   "devDependencies": {

@@ -7,6 +7,9 @@ const posts = require('./controllers/posts');
 const comments = require('./controllers/comments');
 const reactions = require('./controllers/reactions');
 
+const apolloServer = require('./gql/index');
+
+
 const app = express()
 const port = process.env.PORT || 3000;
 
@@ -52,3 +55,9 @@ app.use( (err, req, res, next) =>{
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+
+// The `listen` method launches a web server.
+apolloServer.listen().then(({ url }) => {
+  console.log(`🚀  Server ready at ${url}`);
+});
